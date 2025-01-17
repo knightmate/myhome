@@ -1,5 +1,5 @@
-import { AiOutlineArrowUp } from "react-icons/ai"; // Import the Up Arrow icon
-import Link from "next/link";
+ import Link from "next/link";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 function SocialCard({
   href,
@@ -23,7 +23,7 @@ function SocialCard({
     >
       <div className="absolute rounded-[18px] bg-black/60 opacity-0 hover:opacity-100 w-full h-full text-white">
         <div className="flex items-center justify-center w-full h-full">
-          <AiOutlineArrowUp className="w-6 h-6" />
+          <CiLocationArrow1 className="w-6 h-6" />
         </div>
       </div>
       {icon}

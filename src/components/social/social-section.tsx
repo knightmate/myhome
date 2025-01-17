@@ -1,29 +1,27 @@
-import * as React from 'react';
-import linksCards from './social.links';
-import SocialCard from './social-card';
-import Card from '../card';
+import * as React from "react";
+import linksCards from "./social.links";
+import SocialCard from "./social-card";
+import { FiLink } from "react-icons/fi";
+import CardTitle from "../titles/cardtitle";
+import Card from "../card";
 
 export interface SocialSectionProps {
-  className:string
+  className?: string;
 }
 
-export default function SocialSection (props: SocialSectionProps) {
-
-  const {className}=props;
-
+export default function SocialSection({ className = "" }: SocialSectionProps) {
   return (
     <Card> 
-    <div>
-      <h3>Links</h3>
-    <div className={`flex`}>
-      {
-        linksCards.map((card,index)=>{
-          return(
-            <SocialCard {...card}  key={index}/>
-          )
-        })
-      }
-    </div>
+    <div className={`space-y-1 ${className}`}>
+      <div className="flex items-center space-x-2">
+        <FiLink className="text-xl text-gray-600" />
+        <CardTitle title="LINKS"/> 
+      </div>
+      <div className="flex flex-wrap gap-4">
+        {linksCards.map((card, index) => (
+          <SocialCard {...card} key={index} />
+        ))}
+      </div>
     </div>
     </Card>
   );
