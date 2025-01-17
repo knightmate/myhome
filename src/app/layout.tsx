@@ -27,8 +27,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
     <body
       className={
-  
-        " w-full h-full bg-lighter dark:bg-darker min-h-screen flex flex-col justify-center items-center max-w-3xl m-auto px-4 xs:px-10"
+        "w-full h-full bg-lighter dark:bg-darker min-h-screen flex flex-col justify-center items-center max-w-3xl m-auto px-4 xs:px-10"
       }
     >
          <Header />
