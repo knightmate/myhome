@@ -1,8 +1,8 @@
-import {
-    github,
-    linkedin,
-  } from "@/assets/icons/";
-  import linksMetadata from "@/metadata/links";
+import github from "@/assets/icons/github";
+
+import linkedin from "@/assets/icons/linkedin";
+
+  import linksMetadata from "@/metadata/socialData";
   
   const linksCards = [
     {
@@ -13,7 +13,7 @@ import {
     },
     {
       title: "LinkedIn",
-      className: "!bg-[#0A66C2] p-4",
+      className: "!bg-[#0A66C2] p-2",
       href: linksMetadata.linkedin,
       icon: linkedin,
     }
