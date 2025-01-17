@@ -8,9 +8,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         light: "#EEEEEE",
-      dark: "#171717",
-      lighter: "#F2F2F2",
-      darker: "#0D0D0D",
+        dark: "#171717",
+        lighter: "#F2F2F2",
+        darker: "#0D0D0D",
 
       },
     },

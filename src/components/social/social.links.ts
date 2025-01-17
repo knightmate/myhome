@@ -8,7 +8,7 @@ import linkedin from "@/assets/icons/linkedin";
     {
       title: "Github",
       href: linksMetadata.github,
-      className: "dark:bg-white p-2",
+      className: " bg-dark dark:bg-white p-2",
       icon: github,
     },
     {

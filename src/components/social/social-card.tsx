@@ -17,7 +17,7 @@ function SocialCard({
       passHref
       target="_blank"
       className={
-        "relative flex flex-col items-center justify-center w-14 h-14 bg-dark shadow-sm rounded-[18px] hover:animate-scale " +
+        "relative flex flex-col items-center justify-center w-14 h-14  shadow-sm rounded-[18px] hover:animate-scale " +
         className
       }
     >

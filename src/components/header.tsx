@@ -69,9 +69,10 @@ function Header() {
 //   });
 
   return (
-    <Card className=" !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5">
+     <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">
+     
+     <Card >
 
-    <header className="  w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">
       <div
         className={
           " flex !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
@@ -96,8 +97,9 @@ function Header() {
         </div>
         {themeSwitcher}
        </div>
+       </Card>
     </header>
-    </Card>
+    
   );
 }
 
