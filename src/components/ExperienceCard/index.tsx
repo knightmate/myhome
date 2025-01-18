@@ -1,76 +1,98 @@
-import React from "react";
-import Head from "next/head";
+'use client'
+
+import React, { useRef, useState } from "react";
+import { HiChevronDown } from "react-icons/hi";
 import Card from "../card";
 import SkillTag from "../TagChip";
+import CompanyTitle from "./company-header";
+import ConnectingLine from "./connecting-line";
 
-interface ExperienceCardProps {
-  company: string;
+interface ExpandableProps {
   title: string;
-  joinDate: string; // E.g., "Aug 2018"
-  endDate: string; // E.g., "Dec 2021" or "Present"
+  working: string[];
+  skills: string[];
+  joinDate: string;
+  endDate: string;
   location: string;
-  working: string[]; // List of work responsibilities
-  skills: string[]; // List of skills
 }
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
-  company,
+const Expandable: React.FC<ExpandableProps> = ({
   title,
+  working,
+  skills,
   joinDate,
   endDate,
   location,
-  working,
-  skills,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   return (
-    <>
-      {/* Meta Data for SEO */}
-      <Head>
-        <title>{`${title} at ${company}`}</title>
-        <meta
-          name="description"
-          content={`${title} at ${company} from ${joinDate} to ${endDate}. Worked on key projects and used skills like ${skills.join(
-            ", "
-          )}.`}
-        />
-      </Head>
+  
+    <div className="w-full">
+      {/* Header Section */}
+      <CompanyTitle
+      title={title}
+      />
+      
+     <div className="w-full  pt-2 relative pl-8">
+     <div class="absolute w-0.5 bg-gray-200 h-[10px] left-[11px]"></div>
+     {/* <div class="w-4 h-3 border-l-2 border-b-2 rounded-bl-lg absolute -left-[21px] border-gray-200"></div> */}
+      <div className="    relative">
+             <div class="w-4 h-3 border-l-2 border-b-2 rounded-bl-lg absolute -left-[21px] border-gray-200"></div>  
 
-      {/* Experience Card */}
- <Card className="gap-6"> 
-         {/* Company and Role */}
-        <div className="flex flex-col">
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
-            {company}
-          </h2>
-          <p className="text-lg font-medium text-gray-600 dark:text-gray-300">
-            {title}
-          </p>
-        </div>
-
-        {/* Date and Location */}
-        <div className="text-sm text-gray-500 dark:text-gray-400">
-          <p>
+      <div className="flex flex-row w-full items-center">
+        <div>
+          <h3 className="text-lg font-medium">{title}</h3>
+          <p className="text-sm text-gray-500">
             {joinDate} - {endDate} • {location}
           </p>
         </div>
-
-        {/* Work Details */}
-        <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-          {working.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
-
-        {/* Skills */}
-        <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-        <SkillTag key={index} skill={skill} />
-      ))}
+        <div
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="ml-auto cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
+        >
+          <HiChevronDown
+            className={`w-5 h-5 transform transition-transform duration-300 ${
+              isExpanded ? "rotate-180" : ""
+            }`}
+          />
         </div>
+      </div>
+
+      {/* Expandable Content */}
+      <div
+        ref={contentRef}
+        style={{
+          maxHeight: isExpanded
+            ? `${contentRef.current?.scrollHeight}px`
+            : "0px",
+          opacity: isExpanded ? 1 : 0,
+        }}
+        className="overflow-hidden transition-all duration-500 ease-in-out"
+      >
+        <div className="mt-4">
+          {/* Work Details */}
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+            {working.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+
+          {/* Skills Section */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {skills.map((skill, index) => (
+               <SkillTag key={index} skill={skill}/>
+            ))}
+          </div>
+        </div>
+      </div>
+      </div>
+     </div>
       
-      </Card>
-    </>
+    </div>
+     
   );
 };
 
-export default ExperienceCard;
+export default Expandable;
