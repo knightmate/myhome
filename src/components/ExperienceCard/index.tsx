@@ -30,7 +30,7 @@ const Expandable: React.FC<ExpandableProps> = ({
   return (
   
     <div className="w-full">
-      {/* Header Section */}
+       
       <CompanyTitle
       title={title}
       />
