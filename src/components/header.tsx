@@ -1,7 +1,7 @@
 "use client";
 
 // import MenuIcon from "@/assets/icons/menu";
- import ThemeSwitcher from "@/components/ThemeSwitcher";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 // import AppPaths from "@/constants/paths";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,10 +11,10 @@ import { useEffect, useState } from "react";
 // import useDropDownMenu from "./dropdowns/menu";
 import Card from "./card";
 function Header() {
-  const pathname =""// useAppPathname();
-  
+  const pathname = ""; // useAppPathname();
+
   const [path, setPath] = useState(pathname);
- const apppath= [
+  const apppath = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Work", path: "/work" },
@@ -60,46 +60,41 @@ function Header() {
     );
   });
 
-//   const dropDown = useDropDownMenu({
-//     menu: (
-//       <div className={cardStyle + "px-3 py-4 justify-start shadow-md"}>
-//         {items}
-//       </div>
-//     ),
-//   });
+  //   const dropDown = useDropDownMenu({
+  //     menu: (
+  //       <div className={cardStyle + "px-3 py-4 justify-start shadow-md"}>
+  //         {items}
+  //       </div>
+  //     ),
+  //   });
 
   return (
-     <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">
-     
-     <Card >
-
-      <div
-        className={
-          " flex !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
-        }
-      >
-        <div className="hidden sm:flex flex-wrap items-center w-full">
-          {items}
-         
-        </div>
-        <div>
-          <button
-            onClick={() => dropDown.setOpen(!dropDown.isOpen)}
-            className={btnStyle + "flex sm:hidden !py-1.5 !px-4"}
-          >
-            {/* <MenuIcon
+    <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">
+      <Card>
+        <div
+          className={
+            " flex !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
+          }
+        >
+          <div className="hidden sm:flex flex-wrap items-center w-full">
+            {items}
+          </div>
+          <div>
+            <button
+              onClick={() => dropDown.setOpen(!dropDown.isOpen)}
+              className={btnStyle + "flex sm:hidden !py-1.5 !px-4"}
+            >
+              {/* <MenuIcon
               className="w-7 h-7 text-dark dark:text-neutral-200"
               strokeWidth={2}
             /> */}
-          </button>
-          {/* <div className="sm:hidden">{dropDown.dropdown}</div> */}
-          
+            </button>
+            {/* <div className="sm:hidden">{dropDown.dropdown}</div> */}
+          </div>
+          {themeSwitcher}
         </div>
-        {themeSwitcher}
-       </div>
-       </Card>
+      </Card>
     </header>
-    
   );
 }
 

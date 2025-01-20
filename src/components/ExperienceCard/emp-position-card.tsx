@@ -15,7 +15,6 @@ const PositionDetails: React.FC<PositionDetailsProps> = ({
   endDate,
   location,
   employmentType = "Full-time",
- 
 }) => {
  
   return (

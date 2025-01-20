@@ -30,7 +30,7 @@ export default function RootLayout({
         "w-full h-full bg-lighter dark:bg-darker min-h-screen flex flex-col justify-center items-center max-w-3xl m-auto px-4 xs:px-10"
       }
     >
-         <Header />
+      <Header />
         <main className="h-full w-full justify-center items-center m-auto py-4 xs:py-10">
           {children}
         </main>

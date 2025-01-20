@@ -35,7 +35,7 @@ const Expandable: React.FC<ExpandableProps> = ({
       title={title}
       />
       
-     <div className="w-full  pt-2 relative pl-8">
+     <div className="w-full  relative pl-8">
      <div class="absolute w-0.5 bg-gray-200 h-[10px] left-[11px]"></div>
      {/* <div class="w-4 h-3 border-l-2 border-b-2 rounded-bl-lg absolute -left-[21px] border-gray-200"></div> */}
       <div className="    relative">
