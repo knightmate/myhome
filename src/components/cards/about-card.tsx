@@ -23,7 +23,7 @@ export default function AboutCard({className}) {
             <CardTitle title="KREATORDEV" />
             <p style={{fontFamily:"system-ui"}} className="text-xl font-medium mt-4">Hi, I{"'"}m Ayoub 👋</p>
           </div>
-          <div className="px-3 py-2 bg-teal-100/40 dark:bg-slate-500/20 rounded-full">
+          <div className="px-2 py-2 bg-teal-100/40 dark:bg-slate-500/20 rounded-full">
             <Image
               className="2xs:block rounded-full" // Add "rounded-full" for circular images if avatar is square
               src="/cartoon.png"

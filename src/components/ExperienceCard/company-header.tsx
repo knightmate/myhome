@@ -1,4 +1,5 @@
 import React from "react";
+import Profile from "../Profile";
 
 interface CompanyTitleProps {
   title: string; // The company or title name to display
@@ -8,7 +9,8 @@ interface CompanyTitleProps {
 
 const CompanyTitle: React.FC<CompanyTitleProps> = ({ title, href, className }) => {
     return (
-      <div className="flex flex-col group/company">
+      <div className="flex flex-row group/company items-center gap-2">
+        <Profile/>
         <p
           onClick={() => href && window.open(href, "_blank")}
           className={`text-gray-900 dark:text-gray-100 font-normal text-sm truncate ${

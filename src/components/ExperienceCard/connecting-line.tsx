@@ -7,9 +7,7 @@ interface ConnectingLineProps {
 
 const ConnectingLine: React.FC<ConnectingLineProps> = ({ color, position = "-left-[21px]" }) => {
   return (
-    <div
-      
-      style={{ borderColor: color,border:"1px solid red" }}
+    <div style={{ borderColor: color,border:"1px solid red" }}
     ></div>
   );
 };
