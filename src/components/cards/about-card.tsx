@@ -36,7 +36,7 @@ export default function AboutCard({className}) {
         <span className="text-base font-normal opacity-70 leading-relaxed mt-3 mb-6">
           {shortAbout}
         </span>
-        <Link
+        {/* <Link
           onClick={() => {
             scrollToTop();
           }}
@@ -44,7 +44,7 @@ export default function AboutCard({className}) {
           className="hover:animate-scale"
         >
           <Button title="LEARN MORE" />
-        </Link>
+        </Link> */}
        
     </Card>
   );

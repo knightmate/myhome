@@ -9,8 +9,7 @@ import { useEffect, useState } from "react";
 // import cardStyle from "../styles/card";
 // import { scrollToTop } from "../utils/window";
 // import useDropDownMenu from "./dropdowns/menu";
-import Card from "./card";
-function Header() {
+ function Header() {
   const pathname = ""; // useAppPathname();
 
   const [path, setPath] = useState(pathname);
@@ -69,17 +68,16 @@ function Header() {
   //   });
 
   return (
-    <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">
-      <Card>
+    <header className="w-full sticky top-0 !z-50 bg-lighter dark:bg-darker rounded-b-3xl sm:backdrop-blur-md sm:!bg-opacity-90 ">      
         <div
           className={
-            " flex !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
+            "bg-white flex !p-1 !flex-row items-center justify-between rounded-3xl w-full text-sm text-neutral-500 text-center !px-1.5"
           }
         >
           <div className="hidden sm:flex flex-wrap items-center w-full">
             {items}
           </div>
-          <div>
+          <div> 
             <button
               onClick={() => dropDown.setOpen(!dropDown.isOpen)}
               className={btnStyle + "flex sm:hidden !py-1.5 !px-4"}
@@ -93,7 +91,7 @@ function Header() {
           </div>
           {themeSwitcher}
         </div>
-      </Card>
+      
     </header>
   );
 }

@@ -21,7 +21,7 @@ const CardButton: React.FC<CardButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       className={classNames(
-        "flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500",
+        "flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500",
         {
           "bg-dark text-light hover:bg-darker hover:text-lighter active:scale-95": !disabled,
           "bg-gray-300 text-gray-500 cursor-not-allowed": disabled,
