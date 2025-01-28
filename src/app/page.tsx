@@ -16,10 +16,4 @@ export default function Home() {
   );
 }
 
-/**This is using */
-{
-  /* <div className="flex flex-wrap flex-row justify-start gap-6 py-2 overflow-hidden">
-<AboutCard className="md:flex-1  md:min-w-[500px] md:w-auto w-full" />
-<SocialSection className=" " />
-</div> */
-}
+ 
