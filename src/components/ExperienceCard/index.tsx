@@ -12,6 +12,7 @@ interface ExpandableProps {
   joinDate: string;
   endDate: string;
   location: string;
+  onExpand:(expand:boolean)=>void;
 }
 
 const Expandable: React.FC<ExpandableProps> = ({
@@ -21,9 +22,10 @@ const Expandable: React.FC<ExpandableProps> = ({
   joinDate,
   endDate,
   location,
+  isExpanded,
+  onExpand
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
+   const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="w-full">
@@ -42,7 +44,7 @@ const Expandable: React.FC<ExpandableProps> = ({
               </p>
             </div>
             <div
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={() => onExpand(!isExpanded)}
               className="ml-auto cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
             >
               <HiChevronDown
