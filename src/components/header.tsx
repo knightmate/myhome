@@ -16,8 +16,8 @@ import { useEffect, useState } from "react";
   const apppath = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Work", path: "/work" },
-    { name: "Blog", path: "/blog" },
+    { name: "Projects", path: "/projects" },
+    { name: "Working", path: "/working" },
     { name: "Contact", path: "/contact" },
   ];
 
