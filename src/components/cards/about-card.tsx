@@ -2,15 +2,10 @@
 
 import React from "react";
 import CardTitle from "../titles/cardtitle";
-import Link from "next/link";
-import Button from "../button";
-import Card from "../card";
+  import Card from "../card";
 import Image from "next/image";
 
-// export interface IAppProps {
-// className:string
-// }
-
+ 
 export default function AboutCard({className}) {
   const shortAbout =
     "A software developer from Morocco interested in building apps as solutions.";
@@ -36,16 +31,6 @@ export default function AboutCard({className}) {
         <span className="text-base font-normal opacity-70 leading-relaxed mt-3 mb-6">
           {shortAbout}
         </span>
-        {/* <Link
-          onClick={() => {
-            scrollToTop();
-          }}
-          href="/about"
-          className="hover:animate-scale"
-        >
-          <Button title="LEARN MORE" />
-        </Link> */}
-       
     </Card>
   );
 }
