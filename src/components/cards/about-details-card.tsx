@@ -12,7 +12,7 @@ interface DetailProfileCardProps {
 
 const AboutDetail: React.FC<DetailProfileCardProps> = ({ image, name, position, intro }) => {
   return (
-    <Card> 
+    <Card  className="flex flex-col items-center text-center"> 
     <div className="flex flex-col items-center text-center">
        <Image 
         src={image} 
