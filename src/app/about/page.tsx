@@ -15,7 +15,6 @@ import CardTitle from "@/components/titles/cardtitle";
     />
          <SkillsSection/>
          <CardTitle className="" type="Section" title="Experiences"/>
-      
           <Experiences loadMore={false}/>
         </div>
     </div>

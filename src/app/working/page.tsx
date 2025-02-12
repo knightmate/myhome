@@ -10,7 +10,7 @@ const Working: React.FC = () => {
     <>
       <CardTitle  type='Section' title="Experience's" />
       <Card>
-        <Experiences />
+        <Experiences  />
       </Card>
     </>
   );
