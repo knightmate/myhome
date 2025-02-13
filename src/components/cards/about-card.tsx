@@ -36,7 +36,7 @@ export default function AboutCard({ className }) {
       <span className="text-base font-normal opacity-70 leading-relaxed mt-3 mb-6">
         <MarkdownRenderer filePath="/data/about/aboutShort.md" />
       </span>
-      <CardButton  title="LOAD  MORE!"/>
-    </Card>
+      <CardButton className="font-normal text-xs" title="LOAD MORE!" />
+      </Card>
   );
 }
