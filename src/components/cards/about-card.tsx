@@ -14,14 +14,12 @@ export default function AboutCard({ className }) {
         <div className="flex flex-col flex-grow">
           <CardTitle title="KREATORDEV" />
           <p style={{ fontWeight: "600" }} class="text-xl font-medium mt-4">
-            Hi, I'm Meghraj 👋
-          </p>
-          <p
-            class="remarkable md:text-lg text-gray-700 dark:text-gray-400"
-            style={{ fontWeight: "600" }}
-          >
-            Product engineer and tech enthusiast
-          </p>
+            Hi, I'm Meghraj , 
+         </p>
+          <p class="remarkable text-gray-700 dark:text-gray-400 font-bold underline">
+  Love building things  → Business > Product > Engineering 🚀
+</p>
+
         </div>
         <div className="p-[0.8rem] bg-teal-100/40 dark:bg-slate-500/20 rounded-full flex items-center h-fit">
           <Image
