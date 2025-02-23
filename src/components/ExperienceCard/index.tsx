@@ -26,6 +26,7 @@ const Expandable: React.FC<ExpandableProps> = ({
   onExpand
 }) => {
    const contentRef = useRef<HTMLDivElement>(null);
+console.log("working",working);
 
   return (
     <div className="w-full">

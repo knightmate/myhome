@@ -70,7 +70,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ loadMore = true }) => {
   return (
     <Card>
       <div className="space-y-6 w-full overflow-hidden">
-        {experiences.map((experience, index) => (
+        {jsonData.map((experience, index) => (
           <ExperienceCard
             key={index}
             {...experience}
