@@ -5,6 +5,7 @@ import ExperienceCard from "./index";
 import Card from "../card";
 import Button from "../button";
 import { useRouter } from "next/navigation";
+import experiencesDataJson from '../../data/experienceData.json';
 
 interface ExperiencesProps {
   loadMore?: boolean;
@@ -61,6 +62,10 @@ const Experiences: React.FC<ExperiencesProps> = ({ loadMore = true }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const experiences = loadMore ? experiencesData.slice(0, 1) : experiencesData;
   const router = useRouter();
+  const jsonData=formatExperienceData(experiencesDataJson);
+
+  console.log("experienceData",jsonData);
+
 
   return (
     <Card>
@@ -82,3 +87,21 @@ const Experiences: React.FC<ExperiencesProps> = ({ loadMore = true }) => {
 };
 
 export default Experiences;
+
+
+function formatExperienceData(experienceJson) {
+  return experienceJson.experiences.map((experience)=>{
+    return(
+      {
+        company: experience.company || "Unknown Company",
+        title: experience.title || "Unknown Title",
+        joinDate: experience.joinDate || "N/A",
+        endDate: experience.endDate || "Present",
+        location: experience.location || "N/A",
+        working: experience.working || [],
+        skills: experience.skills || []
+    }
+    )
+  })
+  
+}
