@@ -6,77 +6,34 @@ import Card from "../card";
 import Button from "../button";
 import { useRouter } from "next/navigation";
 import experiencesDataJson from '../../data/experienceData.json';
+import CompanyTitle from "./company-header";
 
 interface ExperiencesProps {
   loadMore?: boolean;
 }
 
-const experiencesData = [
-  {
-    company: "athenahealth",
-    title: "Lead Product Designer",
-    joinDate: "Aug 2018",
-    endDate: "Dec 2021",
-    location: "Pune, India",
-    working: [
-      "Working on an EHR Mobile app called athenaOne.",
-      "Partner with stakeholders and users to discover, define, and address unmet user and business needs.",
-      "Communicate design strategies and reasoning to leadership.",
-      "Create wireframes, prototypes, and high-fidelity comps to communicate design ideas and illustrate user interaction.",
-      "Collaborate with development leads to create buildable solutions within technological and budgetary constraints.",
-      "Facilitate user interviews and remote user testing.",
-      "Design production-ready deliverables.",
-    ],
-    skills: [
-      "Figma",
-      "Product Design",
-      "Product Management",
-      "Design Research",
-      "Design Systems",
-      "AfterEffects",
-    ],
-  },
-  {
-    company: "Tech Innovations",
-    title: "UX Designer",
-    joinDate: "Jan 2015",
-    endDate: "Jul 2018",
-    location: "Bangalore, India",
-    working: [
-      "Developed user flows and wireframes for web applications.",
-      "Collaborated with engineers and product managers to create intuitive interfaces.",
-      "Designed and maintained design systems.",
-      "Conducted usability testing and applied findings to improve user experience.",
-    ],
-    skills: [
-      "Sketch",
-      "Adobe XD",
-      "User Research",
-      "Wireframing",
-      "Usability Testing",
-    ],
-  },
-];
-
 const Experiences: React.FC<ExperiencesProps> = ({ loadMore = true }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
-  const experiences = loadMore ? experiencesData.slice(0, 1) : experiencesData;
+  const experiences = formatExperienceData(experiencesDataJson);
   const router = useRouter();
-  const jsonData=formatExperienceData(experiencesDataJson);
 
-  console.log("experienceData",jsonData);
-
+  console.log("Formatted Experience Data:", experiences);
 
   return (
     <Card>
       <div className="space-y-6 w-full overflow-hidden">
-        {jsonData.map((experience, index) => (
-          <ExperienceCard
-            key={index}
-            {...experience}
-            isExpanded={expandedIndex === index}
-            onExpand={() => setExpandedIndex(expandedIndex === index ? null : index)}
-          />
+        {experiences.map((experience, companyIndex) => (
+          <div key={companyIndex}>
+             <CompanyTitle title={experience.company}/>
+            {experience.roles.map((role, roleIndex) => (
+              <ExperienceCard
+                key={roleIndex}
+                {...role}
+                isExpanded={expandedIndex === roleIndex}
+                onExpand={() => setExpandedIndex(expandedIndex === roleIndex ? null : roleIndex)}
+              />
+            ))}
+          </div>
         ))}
       </div>
       {loadMore && (
@@ -89,19 +46,17 @@ const Experiences: React.FC<ExperiencesProps> = ({ loadMore = true }) => {
 export default Experiences;
 
 
+
 function formatExperienceData(experienceJson) {
-  return experienceJson.experiences.map((experience)=>{
-    return(
-      {
-        company: experience.company || "Unknown Company",
-        title: experience.title || "Unknown Title",
-        joinDate: experience.joinDate || "N/A",
-        endDate: experience.endDate || "Present",
-        location: experience.location || "N/A",
-        working: experience.working || [],
-        skills: experience.skills || []
-    }
-    )
-  })
-  
+  return experienceJson.experiences.map((experience) => ({
+    company: experience.company || "Unknown Company",
+    roles: experience.roles.map((role) => ({
+      title: role.title || "Unknown Title",
+      joinDate: role.joinDate || "N/A",
+      endDate: role.endDate || "Present",
+      location: role.location || "N/A",
+      working: role.working || [],
+      skills: role.skills || [],
+    })),
+  }));
 }

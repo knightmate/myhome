@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { HiChevronDown } from "react-icons/hi";
 import SkillTag from "../TagChip";
 import CompanyTitle from "./company-header";
@@ -12,7 +12,8 @@ interface ExpandableProps {
   joinDate: string;
   endDate: string;
   location: string;
-  onExpand:(expand:boolean)=>void;
+  isExpanded: boolean;
+  onExpand: () => void;
 }
 
 const Expandable: React.FC<ExpandableProps> = ({
@@ -25,18 +26,12 @@ const Expandable: React.FC<ExpandableProps> = ({
   isExpanded,
   onExpand
 }) => {
-   const contentRef = useRef<HTMLDivElement>(null);
-console.log("working",working);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="w-full">
-      <CompanyTitle title={title} />
-
-      <div className="w-full  relative pl-8">
-        <div class="absolute border-[#ea3569]  w-0.5 bg-gray-200 h-[10px] left-[11px]"></div>
+      <div className="w-full relative pl-8">
         <div className="relative">
-          <div class="w-4 border-[#ea3569]  h-[20px]  border-l-2 border-b-2 rounded-bl-lg absolute -left-[21px] border-gray-200"></div>
-
           <div className="flex flex-row w-full items-center">
             <div>
               <h3 className="text-lg font-medium">{title}</h3>
@@ -45,7 +40,7 @@ console.log("working",working);
               </p>
             </div>
             <div
-              onClick={() => onExpand(!isExpanded)}
+              onClick={onExpand}
               className="ml-auto cursor-pointer text-gray-400 hover:text-black transition-colors duration-300"
             >
               <HiChevronDown
