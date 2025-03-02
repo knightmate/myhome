@@ -1,83 +1,115 @@
 {
-    "experiences": [
-      {
-        "company": "Coditation",
-        "title": "Lead Engineer & Architect",
-        "joinDate": "2022",
-        "endDate": "2025",
-        "location": "India",
-        "working": [
-          "Lead and architected the complete mobile application, overseeing the full product lifecycle from development to deployment on Android and iOS using React Native.",
-          "Automated infrastructure setup, enabling seamless static asset uploads to Amazon S3 via CloudFront, improving app performance and reducing latency.",
-          "Spearheaded the migration of a Vue.js microsite to Next.js, significantly enhancing performance, SEO, and frontend responsiveness.",
-          "Bridged the gap between product and engineering, managing end-to-end development for both mobile applications and SaaS web platforms while guiding a cross-functional team.",
-          "Developed a caching mechanism in Node.js, reducing operational costs and optimizing system performance for high-traffic environments.",
-          "Implemented an end-to-end (E2E) testing pipeline using Playwright, automating test execution and storing test reports in an S3 bucket for continuous monitoring.",
-          "Managed development, code reviews, requirement gathering, and client interaction, ensuring efficient project execution and stakeholder communication.",
-          "Optimized microsites for brands using Next.js with Server-Side Rendering (SSR), enhancing SEO and reducing page load times through performance tuning and analytics.",
-          "Designed and implemented RESTful APIs for lead management, real-time reporting, and data synchronization, leveraging Node.js and Express for scalability and efficiency."
-        ],
-        "skills": [
-          "React Native",
-          "Node.js",
-          "Next.js",
-          "GraphQL",
-          "MongoDB",
-          "AWS S3",
-          "CloudFront",
-          "Redux",
-          "Express.js",
-          "Playwright",
-          "REST API Design"
-        ]
-      },
-      {
-        "company": "Coditation Client 2",
-        "title": "Full-Stack Developer",
-        "joinDate": "2022",
-        "endDate": "2025",
-        "location": "India",
-        "working": [
-          "Built a full-stack service booking platform using React, Redux, Node.js, and MongoDB for customers and employees.",
-          "Designed a scalable backend with Express.js, ensuring smooth API interactions and real-time service updates.",
-          "Implemented Redux for state management, enabling seamless data flow and improved user experience.",
-          "Optimized MongoDB schema design for faster data retrieval and efficient storage.",
-          "Integrated Salesforce APIs to automate customer workflows and streamline post-sales operations."
-        ],
-        "skills": [
-          "React",
-          "Redux",
-          "Node.js",
-          "MongoDB",
-          "Express.js",
-          "Salesforce API",
-          "Backend Scalability",
-          "State Management"
-        ]
-      },
-      {
-        "company": "Sunlighten",
-        "title": "IoT & React Native Engineer",
-        "joinDate": "2021",
-        "endDate": "2023",
-        "location": "India",
-        "working": [
-          "Engineered an IoT control system from scratch to manage sauna devices using MQTT, the Publish-Subscribe (Pub-Sub) pattern, and AWS IoT Core, enabling real-time communication between devices and the mobile application.",
-          "Developed key components in the Sunlighten React Native app, improving performance, UI stability, and overall user experience.",
-          "Diagnosed and fixed critical bugs in the existing Sunlighten website to enhance reliability and maintainability.",
-          "Built multiple interactive UI components for Sunlighten.com using React and GraphQL, improving frontend interactivity and responsiveness."
-        ],
-        "skills": [
-          "MQTT",
-          "AWS IoT Core",
-          "React Native",
-          "Node.js",
-          "GraphQL",
-          "Redux",
-          "Frontend Optimization"
-        ]
-      }
-    ]
-  }
-  
-  
+  "experiences": [
+    {
+      "company": "Coditation",
+      "roles": [
+        {
+          "title": "Lead Engineer & Architect",
+          "joinDate": "2022",
+          "endDate": "2025",
+          "location": "India",
+          "working": [
+            "Led the team and delivered the end-to-end product within 3 months, ensuring seamless execution and deployment.",
+            "Architected and built the AI-powered web scraping infrastructure capable of extracting multiple data points from UK and Indian websites.",
+            "Experimented extensively with prompt engineering to optimize AI outputs, achieving 90% accuracy in data extraction.",
+            "Developed an analytical and accuracy measurement tool to evaluate the effectiveness of scrapers and improve data validation.",
+            "Designed and implemented a robust AI-powered web scraping infrastructure using Python, integrated with a React-based dashboard for real-time monitoring, data visualization, and pipeline management.",
+            "Automated the end-to-end pipeline for data collection, structuring, and validation, reducing manual effort and improving efficiency."
+          ],
+          "skills": [
+            "Python",
+            "React.js",
+            "Web Scraping",
+            "AI-Powered Data Extraction",
+            "Prompt Engineering",
+            "Data Analytics",
+            "Node.js",
+            "MongoDB",
+            "Dashboard Development",
+            "Automation",
+            "Scalability Optimization"
+          ]
+        },
+        {
+          "title": "Lead Engineer & Architect",
+          "joinDate": "2022",
+          "endDate": "2025",
+          "location": "India",
+          "working": [
+            "Lead and architected the complete mobile application, overseeing the full product lifecycle from development to deployment on Android and iOS using React Native.",
+            "Automated infrastructure setup, enabling seamless static asset uploads to Amazon S3 via CloudFront, improving app performance and reducing latency.",
+            "Lead the migration of a Vue.js microsite to Next.js, significantly enhancing performance, SEO, and frontend responsiveness.",
+            "Bridged the gap between product and engineering, managing end-to-end development for both mobile applications and SaaS web platforms while guiding a cross-functional team.",
+            "Developed a caching mechanism in Node.js, reducing operational costs and optimizing system performance for high-traffic environments.",
+            "Implemented an end-to-end (E2E) testing pipeline using Playwright, automating test execution and storing test reports in an S3 bucket for continuous monitoring.",
+            "Managed development, code reviews, requirement gathering, and client interaction, ensuring efficient project execution and stakeholder communication.",
+            "Optimized microsites for brands using Next.js with Server-Side Rendering (SSR), enhancing SEO and reducing page load times through performance tuning and analytics.",
+            "Designed and implemented RESTful APIs for lead management, real-time reporting, and data synchronization, leveraging Node.js and Express for scalability and efficiency."
+          ],
+          "skills": [
+            "React Native",
+            "Node.js",
+            "Next.js",
+            "GraphQL",
+            "MongoDB",
+            "AWS S3",
+            "CloudFront",
+            "Redux",
+            "Express.js",
+            "Playwright",
+            "REST API Design"
+          ]
+        },
+        {
+          "title": "Full-Stack Developer",
+          "joinDate": "2022",
+          "endDate": "2025",
+          "location": "India",
+          "working": [
+            "Built a full-stack service booking platform using React, Redux, Node.js, and MongoDB for customers and employees.",
+            "Designed a scalable backend with Express.js, ensuring smooth API interactions and real-time service updates.",
+            "Implemented Redux for state management, enabling seamless data flow and improved user experience.",
+            "Optimized MongoDB schema design for faster data retrieval and efficient storage.",
+            "Integrated Salesforce APIs to automate customer workflows and streamline post-sales operations."
+          ],
+          "skills": [
+            "React",
+            "Redux",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "Salesforce API",
+            "Backend Scalability",
+            "State Management"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Sunlighten",
+      "roles": [
+        {
+          "title": "IoT & React Native Engineer",
+          "joinDate": "2021",
+          "endDate": "2023",
+          "location": "India",
+          "working": [
+            "Engineered an IoT control system from scratch to manage sauna devices using MQTT, the Publish-Subscribe (Pub-Sub) pattern, and AWS IoT Core, enabling real-time communication between devices and the mobile application.",
+            "Developed key components in the Sunlighten React Native app, improving performance, UI stability, and overall user experience.",
+            "Diagnosed and fixed critical bugs in the existing Sunlighten website to enhance reliability and maintainability.",
+            "Built multiple interactive UI components for Sunlighten.com using React and GraphQL, improving frontend interactivity and responsiveness."
+          ],
+          "skills": [
+            "MQTT",
+            "AWS IoT Core",
+            "React Native",
+            "Node.js",
+            "GraphQL",
+            "Redux",
+            "Frontend Optimization"
+          ]
+        }
+      ]
+    }
+  ]
+}
