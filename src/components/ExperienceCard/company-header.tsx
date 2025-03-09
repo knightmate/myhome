@@ -17,6 +17,7 @@ const CompanyTitle: React.FC<CompanyTitleProps> = ({ title, href, className }) =
             href ? "group-hover/company:underline cursor-pointer" : ""
           } ${className}`}
         >
+          
           {title}
         </p>
       </div>
